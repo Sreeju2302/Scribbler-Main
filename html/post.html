@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/post.css">
+    <!-- TODO: Include Font Awesome file here -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <!-- TODO: Include Google Fonts file here -->
+    <script src="https://kit.fontawesome.com/e2942e5994.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- TODO: Include code for header here -->
+    <header>
+        <div id="scribbler">
+            <a href="../index.html">
+            <span class="spanTitle">
+                ScriBBler
+            </span>
+            </a>
+            <p class="subtitle">Explore, Imagine, Create</p>
+        </div>
+        <div id="HeaderButtons">
+            <button class="signButtons" id="mySignup" type="submit" onclick="mySignup">Sign Up</button>
+            <button class="signButtons" id="mySignIn" type="submit">Sign In</button>
+            
+        </div>
+        <div id="SignUpModel" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Get Started</h2>
+                <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+              </div>
+              <hr><br>
+              <div class="modal-body">
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" name="Name" placeholder="Enter your name" required>
+                    <label for="Username">Username</label>
+                    <input type="text" name="username" placeholder="Enter your username" required> 
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                    <label for="password">Confirm Password</label>
+                    <input type="password" placeholder="Re-enter your password" required    >
+                    <button class="submitButtons" id="modalBtn" type="submit">Sign Up</button>
+                </form>
+              </div>
+            </div>
+        </div>
+          <div id="SignInModel" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Welcome Back!</h2>
+                <span class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+              <hr><br>
+              <div class="modal-body">
+                <form action="">
+                    <label for="Username">Username</label>
+                    <input type="text" name="username" placeholder="Enter your username" required> 
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                    <button class="submitButtons" id="modalBtn" type="submit">Sign In</button>
+                </form>
+              </div>
+              <p class="signInPara">Not a member? <a id="modal-footer-signup" onclick="CloseSignIn(); SignUp();">Sign Up</a></p>
+            </div>
+          </div>
+    </header>
+
+    <div class="post container">
+        <div class="heading-content" contenteditable="false" id="edit-heading" contenteditable="true"></div>
+        <div class="author">
+            <div class="author-name"></div>
+            <div>
+                <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
+                        class="fa fa-edit" style="padding-left: 5px;"></i></button>
+            </div>
+        </div>
+
+
+        <div class="post-content" contenteditable="false" id="edit-contenttext" contenteditable="true">
+        </div>
+
+        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
+                class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+        <div id="showCount">Be the first one to like this</div>
+
+        <textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
+        <div><button id="comment-button" type="button" class="btn btn-danger"
+                onclick="addComment(comment)">Comment</button></div>
+        <div id="allCommentsHeading">All Comments</div>
+        <div class="comment-container">
+            <div id="comments">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+</body>
+
+</html>
